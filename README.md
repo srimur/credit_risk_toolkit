@@ -31,7 +31,7 @@ tests/
 - **Isotonic regression (PAVA)** for PD monotonicity enforcement — optimal L2 projection onto the monotone cone
 - **Bayesian smoothing** with adaptive weighting: sparse rating grades automatically get more prior (S&P benchmark)
 - **Generator matrix estimation** via constrained optimization for continuous-time consistency
-- **Vasicek conditional PD** with correct sign convention: `Φ[(Φ⁻¹(PD) - √ρ × Z) / √(1-ρ)]`
+- **Vasicek conditional PD**: `Φ[(Φ⁻¹(PD) - √ρ × Z) / √(1-ρ)]`
 - **Quality scoring** (0–100) with automated diagnostic flags for model governance
 
 ## Quick Start
