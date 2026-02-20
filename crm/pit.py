@@ -1,21 +1,6 @@
 """
 crm.pit — Through-the-Cycle (TTC) to Point-in-Time (PIT) PD conversion.
 
-THE SECOND KEY PAIN POINT THIS SOLVES.
-
-Background
-----------
-Banks need TWO versions of every PD estimate:
-
-  TTC (Through-the-Cycle): Long-run average PD, stable across economic
-      conditions. Used for Basel IRB capital calculations (RWA).
-
-  PIT (Point-in-Time): Current PD reflecting today's economic conditions.
-      Used for IFRS 9 ECL provisioning and CCAR stress testing.
-
-The TTC matrix (from the transition estimator + repair) is what most
-banks have. But IFRS 9 requires PIT. Converting between them is
-non-trivial and poorly standardized across the industry.
 
 Approaches implemented
 ----------------------
@@ -27,13 +12,6 @@ Approaches implemented
 
 3. **Scenario-weighted**: Compute PIT matrix under multiple macro scenarios
    and probability-weight them. Required by IFRS 9 for ECL.
-
-References
-----------
-- Miu & Ozdemir (2005). "Practical and Theoretical Challenges in
-  Validating Basel Parameters."
-- Aguais et al. (2008). "Point-in-Time versus Through-the-Cycle
-  Ratings."
 """
 
 from __future__ import annotations
