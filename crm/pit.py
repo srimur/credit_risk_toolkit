@@ -5,7 +5,7 @@ crm.pit — Through-the-Cycle (TTC) to Point-in-Time (PIT) PD conversion.
 Approaches implemented
 ----------------------
 1. **Vasicek scalar adjustment**: PIT_PD = Φ[(Φ⁻¹(TTC_PD) + √ρ × Z(t)) / √(1-ρ)]
-   where Z(t) is the current macro state. Simple, closed-form.
+   where Z(t) is the current macro state. Simple, closed-form
 
 2. **Merton-style structural**: Map macro variables to the systematic
    factor via regression. More flexible, requires macro data.
