@@ -1,17 +1,17 @@
 # CRM — Credit Risk Modelling Toolkit
 
-A production-grade toolkit for credit rating transition matrix analytics, solving three key pain points in credit risk quantitative work.
+A production-grade toolkit for credit rating transition matrix analytics, solving key pain points in credit risk work.
 
 ## Pain Points Addressed
 
-### 1. Transition Matrix Repair (`crm.repair`)
-Raw transition matrices estimated from internal bank data are almost always broken: non-monotonic PD, sparse cells, non-embeddable matrices. The repair module applies mathematically principled corrections—isotonic regression for PD monotonicity, Bayesian smoothing with S&P benchmarks for sparse cells, optimization-based embeddability enforcement—with a complete audit trail for model governance.
+### 1. Transition Matrix Repair
+Raw transition matrices estimated from internal bank data are sometimes broken: non-monotonic PD, sparse cells, non-embeddable matrices. The repair module applies mathematically principled corrections—isotonic regression for PD monotonicity, Bayesian smoothing with S&P benchmarks for sparse cells, optimization-based embeddability enforcement—with a complete audit trail for model governance.
 
-### 2. TTC-to-PIT Conversion (`crm.pit`)
+### 2. TTC-to-PIT Conversion
 Banks need both Through-the-Cycle PD (Basel RWA) and Point-in-Time PD (IFRS 9 ECL). This module converts between them using the Vasicek single-factor model with scenario-weighting, producing IFRS 9-compliant forward-looking PD curves.
 
-### 3. IFRS 9 ECL Computation (`crm.ecl`)
-Forward-looking, scenario-weighted, properly discounted Expected Credit Loss with automatic IFRS 9 stage allocation. Takes the transition matrix pipeline output and produces provision-ready numbers.
+### 3. ECL Computation
+Forward-looking, scenario-weighted, properly discounted Expected Credit Loss with automatic stage allocation. Takes the transition matrix pipeline output and produces provision-ready numbers.
 
 ## Architecture
 
@@ -65,4 +65,4 @@ python tests/test_crm.py  # 30/30 passing
 ## Dependencies
 
 - numpy, scipy, pandas (core computation)
-- scikit-learn (not required for core modules)
+- scikit-learn
