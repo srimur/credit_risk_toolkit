@@ -8,7 +8,7 @@ A production-grade toolkit for credit rating transition matrix analytics, solvin
 Raw transition matrices estimated from internal bank data are sometimes broken: non-monotonic PD, sparse cells, non-embeddable matrices. The repair module applies mathematically principled corrections—isotonic regression for PD monotonicity, Bayesian smoothing with S&P benchmarks for sparse cells, optimization-based embeddability enforcement—with a complete audit trail for model governance.
 
 ### 2. TTC-to-PIT Conversion
-Banks need both Through-the-Cycle PD (Basel RWA) and Point-in-Time PD (IFRS 9 ECL). This module converts between them using the Vasicek single-factor model with scenario-weighting, producing IFRS 9-compliant forward-looking PD curves.
+Banks need both Through-the-Cycle PD and Point-in-Time PD. This module converts between them using the Vasicek single-factor model with scenario-weighting, producing forward-looking PD curves.
 
 ### 3. ECL Computation
 Forward-looking, scenario-weighted, properly discounted Expected Credit Loss with automatic stage allocation. Takes the transition matrix pipeline output and produces provision-ready numbers.
