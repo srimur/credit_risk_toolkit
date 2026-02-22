@@ -13,7 +13,7 @@ Raw transition matrices estimated from internal bank data are sometimes broken: 
 ## Quick Start
 
 ```python
-from crm import estimate_cohort, full_repair, compute_ecl
+from crm import estimate_cohort, full_repair
 
 # Estimate raw transition matrix
 raw_tm, counts = estimate_cohort(ratings_year1, ratings_year2)
