@@ -35,5 +35,4 @@ python tests/test_crm.py  # 30/30 passing
 
 ## Dependencies
 
-- numpy, scipy, pandas (core computation)
-- scikit-learn
+- numpy, scipy, pandas 
